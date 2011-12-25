@@ -25,6 +25,21 @@ function ftt_setup()
 	load_theme_textdomain( 'theme_ftt', get_template_directory() . '/lang' );
 }
 
+function ftt_string( $index )
+{
+	$strings = array (
+		0 => __( 'Search term: ',                  'theme_ftt' )
+	,	1 => __( 'Use the widget Unfiltered Text', 'theme_ftt' )
+	,	2 => __( 'Header subtitle',                'theme_ftt' )
+	,	3 => __( 'Footer',                         'theme_ftt' )
+	,	4 => __( 'Unfiltered Text',                'theme_ftt' )
+	,	5 => __( 'Pure Markup',                    'theme_ftt' )
+	,	6 => __( 'Hommage to fefe’s blog at http://blog.fefe.de', 'theme_ftt' )
+	);
+
+	return isset ( $strings[ $index ] ) ? $strings[ $index ] : '<b>MISSING STRING!</b>';
+}
+
 /**
  * Removes the opening '<p>' to let the_content() run inline.
  *
@@ -52,7 +67,7 @@ function ftt_searchform()
 	);
 	$url   = home_url( '/' );
 	// The original has no label.
-	$label = __( 'Suchbegriff: ', 'theme_ftt' );
+	$label = ftt_string( 0 );
 	return "<form method=GET action='$url'><label>$label<input name=s
 	value='$query'><input type=submit></label></form>";
 }
@@ -65,10 +80,10 @@ function ftt_searchform()
  */
 function ftt_widgets_setup()
 {
-	$desc =  __( 'Nutze hierzu das Widget Unfiltered Text', 'theme_ftt' );
+	$desc =  ftt_string( 1 );
 	register_sidebar(
 		array (
-			'name'          => __( 'Header-Untertitel', 'theme_ftt' )
+			'name'          => ftt_string( 2 )
 		,	'id'            => 'head'
 		,	'description'   => $desc
 		,	'before_widget' => ''
@@ -79,7 +94,7 @@ function ftt_widgets_setup()
 	);
 	register_sidebar(
 		array (
-			'name'          => __( 'Fußzeile', 'theme_ftt' )
+			'name'          => ftt_string( 3 )
 		// You cannot name it just 'footer' or WordPress breaks in widgets.php.
 		,	'id'            => 'foot'
 		,	'description'   => $desc

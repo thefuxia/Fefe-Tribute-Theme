@@ -15,8 +15,8 @@ class Unfiltered_Text_Widget extends WP_Widget
 	{
 		parent::__construct(
 			'unfiltered_text'
-		,	__( 'Unfiltered Text', 'theme_ftt' )
-		,	array( 'description' => __( 'Pure Markup', 'theme_ftt' ) )
+		,	ftt_string( 4 )
+		,	array( 'description' => ftt_string( 5 ) )
 		,	array( 'width' => 300, 'height' => 150 )
 		);
 	}
