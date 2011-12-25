@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 /**
- * @package    Fefe
+ * @package Fefe Tribute Theme
  *
  * The original site has no <meta name=viewport>
  */

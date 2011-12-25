@@ -1,4 +1,7 @@
 <?php # -*- coding: utf-8 -*-
+/**
+ * @package Fefe Tribute Theme
+ */
 
 add_action( 'after_setup_theme', 'fefe_setup' );
 add_filter( 'the_content', 'fefe_strip_first_p', 11, 1 );
@@ -68,3 +71,12 @@ function fefe_widgets_setup()
 		)
 	);
 }
+
+/*
+ * favicon
+ * langen loop testen
+ * seitennavigation
+ * rename to tribute, functions too
+ * readme, hommage
+ * sprachdateien
+ */

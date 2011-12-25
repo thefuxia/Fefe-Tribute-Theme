@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 /**
- * @package Fefe
+ * @package Fefe Tribute Theme
  */
 get_header();
 

@@ -1,6 +1,6 @@
 <?php 	# -*- coding: utf-8 -*-
 /**
- * @package    Fefe Theme
+ * @package Fefe Tribute Theme
  *
  * Has to be a separate file, because the search widget will load it then.
  * The original has no label.
