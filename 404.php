@@ -6,7 +6,7 @@
 if ( preg_match( '~\.(jpe?g|png|gif|svg|bmp)(\?.*)?$~i', $_SERVER['REQUEST_URI'] ) )
 {
 	header( 'Content-Type: image/png' );
-	locate_template( '404.png', TRUE, TRUE );
+	locate_template( 'screenshot.png', TRUE, TRUE );
 	exit;
 }
 ?><title>Not Found</title>
