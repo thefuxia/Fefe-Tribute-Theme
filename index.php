@@ -9,18 +9,18 @@ if ( ! is_page() )
 	print '<h2><a href="' . home_url( '/' ) . '">' . get_bloginfo( 'name' ) . '</a></h2>';
 	print '<b>' . get_bloginfo( 'description' ) . '</b>';
 
-	if ( is_active_sidebar( 'sub-head' ) )
+	if ( is_active_sidebar( 'head' ) )
 	{
 		print '<p align=right>';
-		dynamic_sidebar( 'sub-head' );
+		dynamic_sidebar( 'head' );
 	}
 }
 else
 {
+	the_post();
 	the_title( '<h2>', '</h2>' );
-		the_post();
-		the_content();
-		wp_link_pages();
+	the_content();
+	wp_link_pages();
 }
 
 if ( is_archive() or is_front_page() or is_search() )
@@ -47,5 +47,4 @@ if ( is_archive() or is_front_page() or is_search() )
 	print '</ul>';
 }
 
-// Loads the sidebar too.
 get_footer();
