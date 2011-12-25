@@ -46,9 +46,8 @@ function fefe_widgets_setup()
 {
 	register_sidebar(
 		array (
-			'name'          => __( 'Fusszeile', 'fefe' )
-		// You cannot name it just 'footer' or WordPress breaks in widgets.php.
-		,	'id'            => 'fefe-footer'
+			'name'          => __( 'Header-Untertitel', 'fefe' )
+		,	'id'            => 'sub-head'
 		,	'description'   => __( 'Nutze hierzu das Widget Unfiltered Text', 'fefe' )
 		,	'before_widget' => ''
 		,	'after_widget'  => ''
@@ -58,8 +57,9 @@ function fefe_widgets_setup()
 	);
 	register_sidebar(
 		array (
-			'name'          => __( 'Header-Untertitel', 'fefe' )
-		,	'id'            => 'sub-head'
+			'name'          => __( 'Fusszeile', 'fefe' )
+		// You cannot name it just 'footer' or WordPress breaks in widgets.php.
+		,	'id'            => 'fefe-footer'
 		,	'description'   => __( 'Nutze hierzu das Widget Unfiltered Text', 'fefe' )
 		,	'before_widget' => ''
 		,	'after_widget'  => ''
