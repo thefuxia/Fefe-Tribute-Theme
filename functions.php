@@ -27,12 +27,7 @@ function ftt_setup()
  */
 function ftt_strip_first_p( $content )
 {
-	if ( 0 !== strpos( $content, '<p>' ) )
-	{
-		return $content;
-	}
-
-	return substr( $content, 3, strlen( $content ) );
+	return 0 !== strpos( $content, '<p>' ) ? $content : substr( $content, 3 );
 }
 
 /**
