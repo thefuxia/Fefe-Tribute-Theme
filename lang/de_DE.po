@@ -54,3 +54,18 @@ msgstr "Fußzeile"
 msgid "Hommage to fefe’s blog at http://blog.fefe.de"
 msgstr "Hommage an Fefes Blog auf http://blog.fefe.de"
 
+#: functions.php:38
+#@ theme_ftt
+msgid "earlier"
+msgstr "früher"
+
+#: functions.php:39
+#@ theme_ftt
+msgid "now"
+msgstr "aktuell"
+
+#: functions.php:40
+#@ theme_ftt
+msgid "later"
+msgstr "später"
+
