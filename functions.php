@@ -38,11 +38,17 @@ function ftt_strip_first_p( $content )
  */
 function ftt_searchform()
 {
-	$query = esc_attr( apply_filters( 'the_search_query', get_search_query( false ) ) );
+	$query = esc_attr(
+		apply_filters(
+			'the_search_query'
+		,	get_search_query( FALSE )
+		)
+	);
 	$url   = home_url( '/' );
 	// The original has no label.
-	$label = __( 'Suchbegriff:', 'fefe' );
-	return "<form method=GET action='$url'><label>$label <input name=s value='$query'><input type=submit></label></form>";
+	$label = __( 'Suchbegriff: ', 'theme_ftt' );
+	return "<form method=GET action='$url'><label>$label<input name=s
+	value='$query'><input type=submit></label></form>";
 }
 
 
@@ -53,11 +59,12 @@ function ftt_searchform()
  */
 function ftt_widgets_setup()
 {
+	$desc =  __( 'Nutze hierzu das Widget Unfiltered Text', 'theme_ftt' );
 	register_sidebar(
 		array (
-			'name'          => __( 'Header-Untertitel', 'fefe' )
+			'name'          => __( 'Header-Untertitel', 'theme_ftt' )
 		,	'id'            => 'head'
-		,	'description'   => __( 'Nutze hierzu das Widget Unfiltered Text', 'fefe' )
+		,	'description'   => $desc
 		,	'before_widget' => ''
 		,	'after_widget'  => ''
 		,	'before_title'  => ''
@@ -66,10 +73,10 @@ function ftt_widgets_setup()
 	);
 	register_sidebar(
 		array (
-			'name'          => __( 'Fußzeile', 'fefe' )
+			'name'          => __( 'Fußzeile', 'theme_ftt' )
 		// You cannot name it just 'footer' or WordPress breaks in widgets.php.
 		,	'id'            => 'foot'
-		,	'description'   => __( 'Nutze hierzu das Widget Unfiltered Text', 'fefe' )
+		,	'description'   => $desc
 		,	'before_widget' => ''
 		,	'after_widget'  => ''
 		,	'before_title'  => ''
