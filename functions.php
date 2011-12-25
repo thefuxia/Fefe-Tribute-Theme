@@ -25,6 +25,12 @@ function ftt_setup()
 	load_theme_textdomain( 'theme_ftt', get_template_directory() . '/lang' );
 }
 
+/**
+ * Hold all translatable strings
+ *
+ * @param int $index
+ * @return string
+ */
 function ftt_string( $index )
 {
 	$strings = array (
@@ -35,9 +41,36 @@ function ftt_string( $index )
 	,	4 => __( 'Unfiltered Text',                'theme_ftt' )
 	,	5 => __( 'Pure Markup',                    'theme_ftt' )
 	,	6 => __( 'Hommage to fefe’s blog at http://blog.fefe.de', 'theme_ftt' )
+	,	7 => __( 'earlier', 'theme_ftt' )
+	,	8 => __( 'now', 'theme_ftt' )
+	,	9 => __( 'later', 'theme_ftt' )
 	);
 
 	return isset ( $strings[ $index ] ) ? $strings[ $index ] : '<b>MISSING STRING!</b>';
+}
+
+/**
+ * Pagination links for archive lists.
+ *
+ * @return void
+ */
+function ftt_archive_pagination()
+{
+	$links = array ();
+
+	$links[] = get_previous_posts_link( ftt_string( 9 ) );
+	$links[]  = ( ! is_home() or is_paged() )
+		? '<a href="' . home_url( '/' ) . '">' . ftt_string( 8 ) . '</a>'
+		: '';
+	$links[] = get_next_posts_link( ftt_string( 7 ) );
+
+	// remove empty entries
+	$links = array_filter( $links );
+
+	if ( ! empty ( $links ) )
+	{
+		print '<div align=center>' . implode( ' -- ', $links ) . '</div>';
+	}
 }
 
 /**

@@ -46,6 +46,7 @@ if ( is_archive() or is_front_page() or is_search() or is_single() )
 	}
 
 	print '</ul>';
+	ftt_archive_pagination();
 }
 
 get_footer();
