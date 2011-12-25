@@ -21,6 +21,9 @@ function ftt_setup()
 	add_action( 'widgets_init', 'ftt_widgets_setup' );
 	locate_template( array ( 'class.Unfiltered_Text_Widget.php' ), TRUE, TRUE );
 	add_action( 'widgets_init', array ( 'Unfiltered_Text_Widget', 'register' ), 20 );
+
+	$lang_dir = get_template_directory() . '/lang';
+	load_theme_textdomain( 'theme_ftt', $lang_dir );
 }
 
 /**
