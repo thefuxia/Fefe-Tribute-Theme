@@ -1,0 +1,63 @@
+/*
+Theme Name: Fefe
+Theme URI: http://toscho.de/fefe
+Description: Tribute to fefe's blog at http://blog.fefe.de
+Author: Thomas Scholz
+Author URI: http://toscho.de/
+Version: 1.0
+*/
+
+body > ul > li { font-family: PT Sans, Trebuchet MS, Helvetica, Arial; font-size: 14px; }
+
+pre { margin-left:20px; }
+
+body > h2 > a {
+  text-decoration:none;
+  color:black;
+}
+
+body > ul > li > a:first-child {
+	margin-left: -17pt;
+	float: left;
+	background: #a0a0a0;
+	color: #a0a0a0;
+	text-decoration: none;
+}
+
+body > ul > li > a:first-child:hover {
+	background: #000000;
+	color: #ffffff;
+}
+
+body > ul > li {
+	list-style-type: none;
+	margin-top: 20pt;
+	margin-right: 20pt;
+	padding: 1em;
+	background-color: #f8f8f8;
+}
+
+ul * ul > li { list-style-type: disc; }
+ul ul > li { list-style-type: square; }
+
+blockquote {
+	margin-left: 1em;
+	border: 1px dashed black;
+	background-color: #f0f0f0;
+	padding: 0.5em;
+}
+
+pre {
+	margin-left: 1em;
+	margin-right: 3em;
+	border-left: 2px dotted black;
+	background-color: #f0f0ff;
+	font-family: Andale Mono, Luxi Mono, Courier;
+	padding: 0.5em;
+}
+
+h3 { font-family: PT Sans, Trebuchet MS, Tahoma, Helvetica, Arial; }
+
+h2 { font-family: Tahoma, Helvetica, Arial; text-align: center; font-size: 200%; }
+
+a:hover { background: #ffa }
