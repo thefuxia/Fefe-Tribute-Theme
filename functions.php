@@ -4,8 +4,12 @@
  */
 
 add_action( 'after_setup_theme', 'ftt_setup' );
-add_filter( 'the_content', 'ftt_strip_first_p', 11, 1 );
-add_shortcode( 'searchform', 'ftt_searchform' );
+add_filter( 'the_content',       'ftt_strip_first_p', 11, 1 );
+add_shortcode( 'searchform',     'ftt_searchform' );
+add_action( 'admin_head',        'ftt_rel_favicon_link' );
+add_action( 'login_head',        'ftt_rel_favicon_link', 10, 0 );
+add_action( 'admin_head',        'ftt_toolbar_icon' );
+add_action( 'wp_head',           'ftt_rel_favicon_link', 10, 0 );
 
 /**
  * Runs on 'after_setup_theme'
@@ -85,11 +89,33 @@ function ftt_widgets_setup()
 	);
 }
 
+/**
+ * Prints the link rel=icon.
+ *
+ * @param  bool $print
+ * @return void|string
+ */
+function ftt_rel_favicon_link()
+{
+
+	$url = get_stylesheet_directory_uri() . '/favicon.ico';
+
+	print "<link rel='shortcut icon' href='$url' />";
+}
+
+/**
+ * Replaces the WordPress icon in the toolbar with the current site's favicon.
+ *
+ * @return void
+ */
+function ftt_toolbar_icon()
+{
+	$url = get_stylesheet_directory_uri() . '/favicon.ico';
+	print "<style>#wp-admin-bar-wp-logo .ab-icon{background:url($url) center no-repeat !important;}</style>";
+}
 /*
- * favicon
  * langen loop testen
  * seitennavigation
- * rename to tribute, functions too
  * readme, hommage
  * sprachdateien
  */
