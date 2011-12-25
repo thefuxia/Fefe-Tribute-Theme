@@ -7,10 +7,10 @@ add_action( 'after_setup_theme', 'fefe_setup' );
 add_filter( 'the_content', 'fefe_strip_first_p', 11, 1 );
 add_shortcode( 'searchform', 'fefe_searchform' );
 
-function fefe_setup()
+function ftt_setup()
 {
 	add_theme_support( 'automatic-feed-links' );
-	add_action( 'widgets_init', 'fefe_widgets_setup' );
+	add_action( 'widgets_init', 'ftt_widgets_setup' );
 	locate_template( array ( 'class.Unfiltered_Text_Widget.php' ), TRUE, TRUE );
 	add_action( 'widgets_init', array ( 'Unfiltered_Text_Widget', 'register' ), 20 );
 }
@@ -21,7 +21,7 @@ function fefe_setup()
  * @param  string $content
  * @return string
  */
-function fefe_strip_first_p( $content )
+function ftt_strip_first_p( $content )
 {
 	if ( 0 !== strpos( $content, '<p>' ) )
 	{
@@ -31,7 +31,7 @@ function fefe_strip_first_p( $content )
 	return substr( $content, 3, strlen( $content ) );
 }
 
-function fefe_searchform()
+function ftt_searchform()
 {
 	$query = esc_attr( apply_filters( 'the_search_query', get_search_query( false ) ) );
 	$url = home_url( '/' );
@@ -45,7 +45,7 @@ function fefe_searchform()
  *
  * @return void
  */
-function fefe_widgets_setup()
+function ftt_widgets_setup()
 {
 	register_sidebar(
 		array (
