@@ -7,6 +7,10 @@ add_action( 'after_setup_theme', 'ftt_setup' );
 add_filter( 'the_content', 'ftt_strip_first_p', 11, 1 );
 add_shortcode( 'searchform', 'ftt_searchform' );
 
+/**
+ * Runs on 'after_setup_theme'
+ * @return void
+ */
 function ftt_setup()
 {
 	add_theme_support( 'automatic-feed-links' );
