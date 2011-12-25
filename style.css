@@ -7,7 +7,8 @@ Author URI: http://toscho.de/
 Version: 1.0
 */
 
-body > ul > li { font-family: PT Sans, Trebuchet MS, Helvetica, Arial; font-size: 14px; }
+/* I removed the fixed font size. Hate that. */
+body > ul > li { font-family: PT Sans, Trebuchet MS, Helvetica, Arial; font-size: 1em; line-height:1.4 }
 
 pre { margin-left:20px; }
 
