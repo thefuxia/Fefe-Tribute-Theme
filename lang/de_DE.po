@@ -19,52 +19,52 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: functions.php:35
+#: functions.php:41
 #@ theme_ftt
 msgid "Unfiltered Text"
 msgstr "Ungefilterter Text"
 
-#: functions.php:36
+#: functions.php:42
 #@ theme_ftt
 msgid "Pure Markup"
 msgstr "Nacktes Markup"
 
-#: functions.php:31
+#: functions.php:37
 #@ theme_ftt
 msgid "Search term: "
 msgstr "Suchbegriff: "
 
-#: functions.php:32
+#: functions.php:38
 #@ theme_ftt
 msgid "Use the widget Unfiltered Text"
 msgstr "Benutze das Widget Ungefilterter Text"
 
-#: functions.php:33
+#: functions.php:39
 #@ theme_ftt
 msgid "Header subtitle"
 msgstr "Header Unterzeile"
 
-#: functions.php:34
+#: functions.php:40
 #@ theme_ftt
 msgid "Footer"
 msgstr "Fußzeile"
 
-#: functions.php:37
+#: functions.php:43
 #@ theme_ftt
 msgid "Hommage to fefe’s blog at http://blog.fefe.de"
 msgstr "Hommage an Fefes Blog auf http://blog.fefe.de"
 
-#: functions.php:38
+#: functions.php:44
 #@ theme_ftt
 msgid "earlier"
 msgstr "früher"
 
-#: functions.php:39
+#: functions.php:45
 #@ theme_ftt
 msgid "now"
 msgstr "aktuell"
 
-#: functions.php:40
+#: functions.php:46
 #@ theme_ftt
 msgid "later"
 msgstr "später"
