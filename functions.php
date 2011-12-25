@@ -163,9 +163,3 @@ function ftt_toolbar_icon()
 	$url = get_stylesheet_directory_uri() . '/favicon.ico';
 	print "<style>#wp-admin-bar-wp-logo .ab-icon{background:url($url) center no-repeat !important;}</style>";
 }
-/*
- * langen loop testen
- * seitennavigation
- * readme, hommage
- * sprachdateien
- */
