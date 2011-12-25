@@ -23,24 +23,25 @@ else
 	wp_link_pages();
 }
 
-if ( is_archive() or is_front_page() or is_search() )
+if ( is_archive() or is_front_page() or is_search() or is_single() )
 {
-	$first_date_view = TRUE;
 
-	print '<ul>';
+	$ftt_date = get_the_date( 'D M d Y' );
+	print "<h3>$ftt_date</h3><ul>";
 
 	while ( have_posts() )
 	{
 		the_post();
-		the_date(
-			'D M d Y'
-		,	( $first_date_view ? '<h3>' : '</ul><h3>' )
-		,	( $first_date_view ? '</h3>' : '</h3><ul>' )
-		);
-		$first_date_view = FALSE;
+		$ftt_date_new = get_the_date( 'D M d Y' );
+		if ( $ftt_date != $ftt_date_new )
+		{
+			print "</ul><h3>$ftt_date_new</h3><ul>";
+		}
+		$ftt_date = $ftt_date_new;
 
 		print '<li><a href="' . get_permalink() . '">[1]</a> ';
 		the_content();
+		#the_excerpt();
 		wp_link_pages();
 	}
 
