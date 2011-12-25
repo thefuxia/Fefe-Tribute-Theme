@@ -3,9 +3,9 @@
  * @package Fefe Tribute Theme
  */
 
-add_action( 'after_setup_theme', 'fefe_setup' );
-add_filter( 'the_content', 'fefe_strip_first_p', 11, 1 );
-add_shortcode( 'searchform', 'fefe_searchform' );
+add_action( 'after_setup_theme', 'ftt_setup' );
+add_filter( 'the_content', 'ftt_strip_first_p', 11, 1 );
+add_shortcode( 'searchform', 'ftt_searchform' );
 
 function ftt_setup()
 {
@@ -57,7 +57,7 @@ function ftt_widgets_setup()
 	register_sidebar(
 		array (
 			'name'          => __( 'Header-Untertitel', 'fefe' )
-		,	'id'            => 'sub-head'
+		,	'id'            => 'head'
 		,	'description'   => __( 'Nutze hierzu das Widget Unfiltered Text', 'fefe' )
 		,	'before_widget' => ''
 		,	'after_widget'  => ''
@@ -67,9 +67,9 @@ function ftt_widgets_setup()
 	);
 	register_sidebar(
 		array (
-			'name'          => __( 'Fusszeile', 'fefe' )
+			'name'          => __( 'Fußzeile', 'fefe' )
 		// You cannot name it just 'footer' or WordPress breaks in widgets.php.
-		,	'id'            => 'fefe-footer'
+		,	'id'            => 'foot'
 		,	'description'   => __( 'Nutze hierzu das Widget Unfiltered Text', 'fefe' )
 		,	'before_widget' => ''
 		,	'after_widget'  => ''
