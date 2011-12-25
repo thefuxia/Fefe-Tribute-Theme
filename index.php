@@ -23,7 +23,7 @@ else
 		wp_link_pages();
 }
 
-if ( is_archive() or is_front_page() )
+if ( is_archive() or is_front_page() or is_search() )
 {
 	$first_date_view = TRUE;
 
