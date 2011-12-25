@@ -53,7 +53,8 @@ pre {
 	margin-right: 3em;
 	border-left: 2px dotted black;
 	background-color: #f0f0ff;
-	font-family: Andale Mono, Luxi Mono, Courier;
+	/* small changes to monospace font selection */
+	font-family: Andale Mono, Luxi Mono, Courier New, Courier, monospace, serif;
 	padding: 0.5em;
 }
 
