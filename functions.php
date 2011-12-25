@@ -31,10 +31,17 @@ function ftt_strip_first_p( $content )
 	return substr( $content, 3, strlen( $content ) );
 }
 
+/**
+ * Returns the search form.
+ * Used by searchform.php and the shortcode.
+ *
+ * @return string
+ */
 function ftt_searchform()
 {
 	$query = esc_attr( apply_filters( 'the_search_query', get_search_query( false ) ) );
-	$url = home_url( '/' );
+	$url   = home_url( '/' );
+	// The original has no label.
 	$label = __( 'Suchbegriff:', 'fefe' );
 	return "<form method=GET action='$url'><label>$label <input name=s value='$query'><input type=submit></label></form>";
 }
