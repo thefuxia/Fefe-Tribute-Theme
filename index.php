@@ -6,7 +6,7 @@ get_header();
 
 if ( ! is_page() )
 {
-	print '<h2><a href="' . home_url( '/' ) . '">' . get_bloginfo( 'name' ) . '</a></h2>';
+	print '<h2><a href="' . home_url( '/' ) . '" style="text-decoration:none;color:black">' . get_bloginfo( 'name' ) . '</a></h2>';
 	print '<b>' . get_bloginfo( 'description' ) . '</b>';
 
 	if ( is_active_sidebar( 'head' ) )
