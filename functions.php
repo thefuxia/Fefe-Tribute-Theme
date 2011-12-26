@@ -4,12 +4,12 @@
  */
 
 add_action( 'after_setup_theme', 'ftt_setup' );
-add_filter( 'the_content',       'ftt_strip_first_p', 11, 1 );
-add_shortcode( 'searchform',     'ftt_searchform' );
 add_action( 'admin_head',        'ftt_rel_favicon_link' );
 add_action( 'login_head',        'ftt_rel_favicon_link', 10, 0 );
 add_action( 'admin_head',        'ftt_toolbar_icon' );
 add_action( 'wp_head',           'ftt_rel_favicon_link', 10, 0 );
+add_filter( 'the_content',       'ftt_strip_first_p', 11, 1 );
+add_shortcode( 'searchform',     'ftt_searchform' );
 
 /**
  * Runs on 'after_setup_theme'
@@ -26,9 +26,9 @@ function ftt_setup()
 }
 
 /**
- * Hold all translatable strings
+ * Holds all translatable strings
  *
- * @param int $index
+ * @param  int $index
  * @return string
  */
 function ftt_string( $index )
@@ -41,9 +41,9 @@ function ftt_string( $index )
 	,	4 => __( 'Unfiltered Text',                'theme_ftt' )
 	,	5 => __( 'Pure Markup',                    'theme_ftt' )
 	,	6 => __( 'Hommage to fefe’s blog at http://blog.fefe.de', 'theme_ftt' )
-	,	7 => __( 'earlier', 'theme_ftt' )
-	,	8 => __( 'now', 'theme_ftt' )
-	,	9 => __( 'later', 'theme_ftt' )
+	,	7 => __( 'earlier',                        'theme_ftt' )
+	,	8 => __( 'now',                            'theme_ftt' )
+	,	9 => __( 'later',                          'theme_ftt' )
 	);
 
 	return isset ( $strings[ $index ] ) ? $strings[ $index ] : '<b>MISSING STRING!</b>';
@@ -147,9 +147,7 @@ function ftt_widgets_setup()
  */
 function ftt_rel_favicon_link()
 {
-
 	$url = get_stylesheet_directory_uri() . '/favicon.ico';
-
 	print "<link rel='shortcut icon' href='$url' />";
 }
 
