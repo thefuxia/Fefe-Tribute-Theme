@@ -8,8 +8,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html <?php language_attributes(); ?>>
 <title><?php
-$current_title = wp_title( '|', FALSE );
-print empty ( $current_title ) ? get_bloginfo( 'name' ) : $current_title;
+wp_title( '|', TRUE, 'right' );
+bloginfo( 'name' );
 ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
