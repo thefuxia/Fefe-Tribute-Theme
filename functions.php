@@ -162,7 +162,7 @@ function ftt_toolbar_icon()
 	print "<style>#wp-admin-bar-wp-logo .ab-icon{background:url($url) center no-repeat !important;}</style>";
 }
 
-function shd_get_content_title($title)
+function ftt_get_content_title($title)
 {
 	if(is_feed())
 	{
@@ -189,5 +189,5 @@ function shd_get_content_title($title)
 	return $title;
 }
 
-add_filter('the_title', 'shd_get_content_title');
+add_filter('the_title', 'ftt_get_content_title');
 
