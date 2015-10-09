@@ -161,3 +161,33 @@ function ftt_toolbar_icon()
 	$url = get_stylesheet_directory_uri() . '/favicon.ico';
 	print "<style>#wp-admin-bar-wp-logo .ab-icon{background:url($url) center no-repeat !important;}</style>";
 }
+
+function shd_get_content_title($title)
+{
+	if(is_feed())
+	{
+		if(strlen($title)  == 0)
+		{
+			$content = get_the_content();
+			$worte = explode(' ', $content);
+			if(sizeof($worte) > 7)
+			{
+				for( $x = 0; $x < 7; $x++)
+				{
+					$title .= "{$worte[$x]} ";
+				}
+				$title .= "...";
+			
+			}
+			else 
+			{
+				$title = $content;
+			}
+		}
+	}
+	
+	return $title;
+}
+
+add_filter('the_title', 'shd_get_content_title');
+
